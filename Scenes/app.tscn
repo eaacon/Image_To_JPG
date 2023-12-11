@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3i8spu1hib4t"]
 
-[ext_resource type="Texture2D" uid="uid://c70yed76f42n1" path="res://SVG/eaaconLogo.svg" id="1_w11vk"]
-[ext_resource type="Script" path="res://FileDropper.gd" id="1_yo1r7"]
-[ext_resource type="Script" path="res://PopupPanel.gd" id="4_eonrv"]
+[ext_resource type="Script" path="res://Scripts/PopupPanel.gd" id="1_pot7i"]
+[ext_resource type="Texture2D" uid="uid://c70yed76f42n1" path="res://SVG/eaaconLogo.svg" id="2_56gip"]
+[ext_resource type="Script" path="res://Scripts/FileDropper.gd" id="3_nafmv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sybpa"]
 bg_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -48,7 +48,7 @@ border_width = 2.4
 title = "!"
 initial_position = 2
 size = Vector2i(300, 470)
-script = ExtResource("4_eonrv")
+script = ExtResource("1_pot7i")
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupPanel"]
 anchors_preset = 15
@@ -128,7 +128,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-texture = ExtResource("1_w11vk")
+texture = ExtResource("2_56gip")
 expand_mode = 3
 stretch_mode = 5
 
@@ -143,7 +143,7 @@ vertical_alignment = 1
 [node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
-script = ExtResource("1_yo1r7")
+script = ExtResource("3_nafmv")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
 layout_mode = 1

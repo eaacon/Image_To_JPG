@@ -1,2 +1,3 @@
 res://app.tscn
-res://PopupPanel.gd
+res://Scenes/app.tscn
+res://Scripts/FileDropper.gd

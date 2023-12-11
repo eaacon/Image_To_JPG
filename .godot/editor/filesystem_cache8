@@ -1,12 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702319135
-app.tscn::PackedScene::9143101319965602017::1702319077::0::1::::<><>::uid://c70yed76f42n1::::res://SVG/eaaconLogo.svg<>res://FileDropper.gd<>res://PopupPanel.gd
+::res://::1702319379
+app.tscn::PackedScene::9143101319965602017::1702319371::0::1::::<><>::uid://c70yed76f42n1::::res://SVG/eaaconLogo.svg<>res://Scripts/FileDropper.gd<>res://Scripts/PopupPanel.gd
 export_presets.cfg::TextFile::-1::1699415286::0::1::::<><>::
+file_item.tscn::PackedScene::871804574519954541::1702319371::0::1::::<><>::uid://b6mu6rh21og56::::res://SVG/Artboard 1.svg<>res://Scripts/file_item.gd
+README.md::TextFile::-1::1702319271::0::1::::<><>::
+::res://Scenes/::1702319379
+::res://Scripts/::1702319371
 FileDropper.gd::GDScript::-1::1702318622::0::1::::<>Panel<>::
 file_item.gd::GDScript::-1::1699465909::0::1::::<>PanelContainer<>::
-file_item.tscn::PackedScene::871804574519954541::1702318623::0::1::::<><>::uid://b6mu6rh21og56::::res://SVG/Artboard 1.svg<>res://file_item.gd
-PopupPanel.gd::GDScript::-1::1702318546::0::1::::<>PopupPanel<>::
-::res://SVG/::1699408882
+PopupPanel.gd::GDScript::-1::1702319164::0::1::::<>PopupPanel<>::
+::res://SVG/::1702319136
 Artboard 1.svg::CompressedTexture2D::4588317973959846115::1698953590::1702319136::1::::<><>::
 eaaconLogo.svg::CompressedTexture2D::7071958367076890584::1698952392::1702319136::1::::<><>::
 icon.svg::CompressedTexture2D::1014273619680844206::1698950996::1702319136::1::::<><>::

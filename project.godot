@@ -12,7 +12,7 @@ config_version=5
 
 config/name="PNGtoJPG"
 config/description="Png to Jpg file converter."
-run/main_scene="res://app.tscn"
+run/main_scene="res://Scenes/app.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/fullsize=false

@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var ui_item_asset = preload("res://file_item.tscn")
+@onready var ui_item_asset = preload("res://Scenes/file_item.tscn")
 var quality
 var canover = false
 @onready var popup = $"../../../PopupPanel"
@@ -12,6 +12,7 @@ var target_set = PackedStringArray()
 
 func _ready():
 	get_viewport().files_dropped.connect(on_files_dropped)
+	quality = $"../MarginContainer/HSlider".value
 
 func on_files_dropped(files):
 	print("Dropped:")
