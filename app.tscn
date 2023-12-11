@@ -1,0 +1,189 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3i8spu1hib4t"]
+
+[ext_resource type="Texture2D" uid="uid://c70yed76f42n1" path="res://SVG/eaaconLogo.svg" id="1_w11vk"]
+[ext_resource type="Script" path="res://FileDropper.gd" id="1_yo1r7"]
+[ext_resource type="Script" path="res://PopupPanel.gd" id="4_eonrv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sybpa"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[sub_resource type="Theme" id="Theme_xb1vq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 70.0
+grow_horizontal = 0
+pivot_offset = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.505882, 0.521569, 0.529412, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_sybpa")
+text = "X"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 560.0
+offset_bottom = 760.0
+border_color = Color(0.564706, 0.823529, 0.988235, 1)
+border_width = 2.4
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+title = "!"
+initial_position = 2
+size = Vector2i(300, 470)
+script = ExtResource("4_eonrv")
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupPanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="PopupPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "File at \"User/Images/Img.jpg\" eexists. Are you sure you want to replace it?"
+autowrap_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="PopupPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "ALL "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="YesAll" type="Button" parent="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+self_modulate = Color(0.756863, 0.756863, 0.756863, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "All"
+
+[node name="Yes" type="Button" parent="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.756863, 0.756863, 0.756863, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes"
+
+[node name="No" type="Button" parent="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+texture = ExtResource("1_w11vk")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "IMG to JPG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+script = ExtResource("1_yo1r7")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.490196, 0.490196, 0.490196, 1)
+theme_override_font_sizes/font_size = 30
+text = "Drag Images Here !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 30)
+layout_mode = 2
+theme = SubResource("Theme_xb1vq")
+max_value = 1.0
+step = 0.01
+value = 0.9
+tick_count = 5
+ticks_on_borders = true
+
+[connection signal="button_down" from="Button" to="MarginContainer/VBoxContainer/Panel" method="_on_button_button_down"]
+[connection signal="button_down" from="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer/YesAll" to="PopupPanel" method="_on_yes_all_button_down"]
+[connection signal="button_down" from="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer/Yes" to="PopupPanel" method="_on_yes_button_down"]
+[connection signal="button_down" from="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer/No" to="PopupPanel" method="_on_no_button_down"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/MarginContainer/HSlider" to="MarginContainer/VBoxContainer/Panel" method="_on_h_slider_value_changed"]

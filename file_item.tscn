@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://mokq2baa81uv"]
+
+[ext_resource type="Texture2D" uid="uid://b6mu6rh21og56" path="res://SVG/Artboard 1.svg" id="1_gy22v"]
+[ext_resource type="Script" path="res://file_item.gd" id="1_wjaw1"]
+
+[node name="File_Item" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 100)
+script = ExtResource("1_wjaw1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_gy22v")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "~/Library/Application Support/Godot/app_userdata/[project_name]"
+vertical_alignment = 1
+autowrap_mode = 1
+text_overrun_behavior = 3
